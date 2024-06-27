@@ -57,3 +57,9 @@ class Snake:
         seg.goto(last_pos)
         self.segs.append(seg)
 
+    def reset(self):
+        for seg in self.segs:
+            seg.goto(1000,1000)
+        self.segs.clear()
+        self.create_snake()
+        self.head = self.segs[0]
